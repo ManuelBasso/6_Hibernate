@@ -1,4 +1,4 @@
-package com.example.hibernateexercise;
+package com.example.hibernateexercise.tables;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,15 +13,12 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "FIRSTNAME")
-    @NonNull
+    @Column(name = "name", nullable = false)
     private String firstName;
 
-    @Column(name = "LASTNAME")
-    @NonNull
+    @Column(name = "surname", nullable = false)
     private String lastName;
 
-    @Column(name = "EMAIL")
-    @NonNull
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
 }

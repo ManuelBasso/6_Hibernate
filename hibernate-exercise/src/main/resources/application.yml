@@ -1,12 +1,10 @@
 spring:
   datasource:
-    url: "jdbc:mysql://127.0.0.1:3306/testtt"
-    username: "root"
-    password: "admin"
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-    jpa:
-      database: mysql
-      show_sql: true
+    url: jdbc:mysql://127.0.0.1:3306/testtt
+    username: root
+    password: admin
+  jpa:
+    database: mysql
+    show_sql: true
     hibernate:
-      ddl_auto: create-drop
+      ddl-auto: create-drop
